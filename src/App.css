@@ -1,38 +1,256 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: black; /* Black background */
+  color: white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background: linear-gradient(to right, #222, #444); /* Dark gradient for header */
+  color: white;
+  padding: 1rem 1rem; /* Reduced padding for smaller navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Reduced font size */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
+  margin-top: 1.5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+form input {
+  padding: 0.6rem; /* Reduced padding */
+  width: 250px; /* Reduced input width */
+  border: none;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+form button {
+  padding: 0.6rem 1.2rem; /* Reduced button padding */
+  border: none;
+  border-radius: 8px;
+  background: #ff3333; /* Red button */
+  color: white;
+  font-size: 1rem; /* Reduced font size */
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+form button:hover {
+  background: #e60000; /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative; /* Ensure positioning for overlay */
+}
+
+.movie-item {
+  background: #222; /* Dark background for cards */
+  color: white;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.movie-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 1);
+}
+
+.movie-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #ff6b6b; /* Highlight line below image */
+}
+
+.movie-item h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #ff9900; /* Highlighted text color */
+}
+
+.movie-item p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  z-index: 10;
+}
+
+.modal-content {
+  background: #333; /* Dark modal background */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 80%;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content h2 {
+  color: #ff3333; /* Red highlight for modal title */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-content p {
+  margin-bottom: 0.5rem;
+}
+
+.modal-content button {
+  background: #ff4d4d;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background 0.2s ease;
+}
+
+.modal-content button:hover {
+  background: #e63946;
+}
+
+.error-message {
+  color: red; /* Highlight error in red */
+  font-size: 1.2rem;
+  margin: 1.5rem;
+}
+
+.search-form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ff6b6b, #f86d7d); /* Gradient background */
+  border-radius: 25px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Adjust width for the entire search bar */
+}
+
+.search-bar input {
+  flex: 1; /* Let the input take the remaining space */
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  outline: none;
+  color: #333;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem; /* Size for the search icon */
+  cursor: pointer;
+  color: white;
+  width: 40px; /* Fixed width to fit neatly */
+  height: 40px; /* Fixed height to match input */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  border-radius: 50%; /* Make the button circular */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-icon:hover {
+  background: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+  transform: scale(1.1); /* Slight scaling on hover */
+}
+
+.highlighted-details {
+  position: fixed; /* Fixed position */
+  top: 10%; /* Space from the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center exactly */
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  padding: 1rem; /* Padding around the content */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  width: 70%; /* Adjust width */
+  max-width: 500px; /* Max width */
+  height: 80vh; /* Reduce height to 80% of the viewport height */
+  overflow: hidden; /* Hide any overflow */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.highlighted-details img {
+  width: 100%; /* Make the image fill the width */
+  height: 40%; /* Limit image height to 40% of the overlay */
+  object-fit: contain; /* Ensure image is not cropped */
+  border-radius: 8px;
+  margin-bottom: 1rem; /* Space between image and text */
+}
+
+.highlighted-details h2 {
+  color: #ff6b6b; /* Highlight title */
+  margin-bottom: 1rem;
+}
+
+.highlighted-details p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  flex-grow: 1; /* Let text content take up remaining space */
+  overflow-y: auto; /* Allow scrolling if text exceeds space */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
 }
