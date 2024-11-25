@@ -4,13 +4,14 @@ import MovieList from "./components/MovieList";
 import MovieModal from "./components/MovieModal";
 import "./App.css";
 
-const API_URL = "https://www.omdbapi.com/?apikey=b30b71d4&s=popular";
+const API_URL = "https://www.omdbapi.com/";
+const API_KEY = "b30b71d4"; // Use environment variables for security
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedMovie, setSelectedMovie] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(""); // State for error messages
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     // Fetch popular movies by default
@@ -19,15 +20,16 @@ function App() {
 
   const fetchMovies = async (query) => {
     try {
-      const response = await axios.get(`${API_URL}&s=${query}`);
+      const response = await axios.get(`${API_URL}?apikey=${API_KEY}&s=${query}`);
       if (response.data.Search) {
+        // Option 1: Fetch detailed info for each movie (not recommended for large searches)
         const moviesWithDetails = await Promise.all(
           response.data.Search.map(async (movie) => {
-            const details = await axios.get(`${API_URL}&i=${movie.imdbID}`);
-            return { ...movie, ...details.data };
+            const detailsResponse = await axios.get(`${API_URL}?apikey=${API_KEY}&i=${movie.imdbID}`);
+            return { ...movie, ...detailsResponse.data };
           })
         );
-        setMovies(moviesWithDetails); // Set movies with details
+        setMovies(moviesWithDetails);
         setErrorMessage("");
       } else {
         setMovies([]);
