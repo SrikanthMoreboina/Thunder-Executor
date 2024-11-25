@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = " http://www.omdbapi.com/?i=tt3896198&apikey=b30b71d4";
+const API_URL = "https://www.omdbapi.com/?apikey=b30b71d4&s=popular";
+
 
 const MovieModal = ({ movie, onClose }) => {
   const [details, setDetails] = useState(null);
